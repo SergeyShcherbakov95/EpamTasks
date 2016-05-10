@@ -10,8 +10,8 @@ import java.util.Scanner;
  */
 public class Controller {
     //Constants
-    public static final int UPPER_BORDER = 100;
-    public static final int LOWER_BORDER = 0;
+    public static final int UPPER_BORDER = 99;
+    public static final int LOWER_BORDER = 1;
 
     private View view;
     private Model model;
