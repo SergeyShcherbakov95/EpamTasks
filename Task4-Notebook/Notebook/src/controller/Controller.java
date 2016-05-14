@@ -5,6 +5,7 @@ import view.View;
 import view.ViewConstants;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 /**
  * Created by sergey on 14/05/16.
@@ -32,7 +33,7 @@ public class Controller {
         String groupMessage = ViewConstants.GROUP_LABEL;
         entity.Group[] groups = entity.Group.values();
         for(int i = 0; i < groups.length; i++)
-            groupMessage += "\n" + (i+1) + "." + groups[i].name();
+            groupMessage += "\n" + i + "." + groups[i].name();
 
         String group = this.checkInputData(sc, groupMessage, RegexConstants.GROUP_REGEX);
 
@@ -49,6 +50,17 @@ public class Controller {
         model.setNotebook(surname, name, patronymic, nickname, comment, group, homePhoneNumber, mobileNumber,
                 email, skype, city, street, houseNumber, apartmentNumber, index);
 
+        view.printMessage(surname);
+        view.printMessage(name);
+        view.printMessage(patronymic);
+        view.printMessage(group);
+        view.printMessage(nickname);
+        view.printMessage(comment);
+        view.printMessage(skype);
+        view.printMessage(email);
+        view.printMessage(city);
+        view.printMessage(apartmentNumber);
+
     }
 
     /**
@@ -62,13 +74,18 @@ public class Controller {
         view.printMessage(ViewConstants.SEPARATOR);
         view.printMessage(message);
 
-        while( !sc.hasNext(regex)) {
+        Pattern pattern = Pattern.compile(regex);
+        String answer = "";
+
+        while( sc.hasNext() ) {
+            answer = sc.next();
+            if(pattern.matcher(answer).matches())
+                break;
             view.printMessage(ViewConstants.WRONG_INPUT);
             view.printMessage(message);
-            sc.next();
         }
 
-        return sc.next();
+        return answer;
     }
 }
 

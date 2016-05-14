@@ -10,7 +10,7 @@ public interface ViewConstants {
     String NAME_LABEL = "Input name:";
     String PATRONYMIC_LABEL = "Input patronymic:";
     String NICKNAME_LABEL = "Input nickname:";
-    String COMMENT_LABEL = "Input comment:";
+    String COMMENT_LABEL = "Input comment( - if you do not want to comment):";
     String GROUP_LABEL = "Input group(input number):";
     String HOME_PHONE_NUMBER_LABEL = "Input home phone number:";
     String MOBILE_NUMBER_LABEL = "Input mobile number:";

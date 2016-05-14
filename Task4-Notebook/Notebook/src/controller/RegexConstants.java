@@ -16,7 +16,7 @@ public interface RegexConstants {
     /**
      * Comment
      */
-    String COMMENT_REGEX = "^[A-Za-z0-9\\., ]{0,}$";
+    String COMMENT_REGEX = "^[\\-A-Za-z0-9\\., ]{0,}$";
     /**
      * Group
      */
@@ -24,11 +24,11 @@ public interface RegexConstants {
     /**
      * Home and mobile phone. +38(000)000-00-00
      */
-    String PHONE_REGEX = ":^\\+\\d{2}\\(\\d{3}\\)\\d{3}-\\d{2}-\\d{2}$";
+    String PHONE_REGEX = "^\\+\\d{2}\\(\\d{3}\\)\\d{3}-\\d{2}-\\d{2}$";
     /**
      * email
      */
-    String EMAIL_REGEX = "^([a-z0-9_-]+\\\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\\\.[a-z0-9_-]+)*\\\\.[a-z]{2,6}";
+    String EMAIL_REGEX = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     /**
      * skype
      */
@@ -40,11 +40,11 @@ public interface RegexConstants {
     /**
      * City
      */
-    String CITY_REGEX = "^[A-Za-z- ]{3, 50}$";
+    String CITY_REGEX = "^[A-Za-z- ]{3,50}$";
     /**
      * Street
      */
-    String STREET_REGEX = "^[A-Za-z- ]{3, 50}$";
+    String STREET_REGEX = "^[A-Za-z- ]{3,50}$";
     /**
      * House number
      */
