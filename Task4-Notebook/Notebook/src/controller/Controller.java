@@ -49,18 +49,6 @@ public class Controller {
 
         model.setNotebook(surname, name, patronymic, nickname, comment, group, homePhoneNumber, mobileNumber,
                 email, skype, city, street, houseNumber, apartmentNumber, index);
-
-        view.printMessage(surname);
-        view.printMessage(name);
-        view.printMessage(patronymic);
-        view.printMessage(group);
-        view.printMessage(nickname);
-        view.printMessage(comment);
-        view.printMessage(skype);
-        view.printMessage(email);
-        view.printMessage(city);
-        view.printMessage(apartmentNumber);
-
     }
 
     /**
